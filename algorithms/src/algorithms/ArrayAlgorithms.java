@@ -4,7 +4,7 @@ import programming.contract.*;
 
 public class ArrayAlgorithms {
 
-	public static void fill(int startValue, int incrementValue, int [] a) throws PreconditionError, InterruptedException {
+	public static void fill(int [] a, int startValue, int incrementValue) throws PreconditionError, InterruptedException {
 		PreconditionError.Test(a == null || a.length < 1, "The array must have at least one element.");
 		
 		a[0] = startValue;
@@ -16,7 +16,7 @@ public class ArrayAlgorithms {
 		}
 	}
 	
-	public static void swap(int i, int j, int [] a) throws PreconditionError {
+	public static void swap(int [] a, int i, int j) throws PreconditionError {
 		PreconditionError.Test(a == null || a.length < 1, "The array must have at least one element.");
 		
 		int tempI = a[i];
@@ -29,7 +29,7 @@ public class ArrayAlgorithms {
 			return;
 		
 		for(int left = 0, right = a.length - 1; left < right; ++left, --right) {
-			swap(left, right, a);
+			swap(a, left, right);
 			DisplayTool.instance().DisplayHistogram(a, 1000);
 		}
 	}

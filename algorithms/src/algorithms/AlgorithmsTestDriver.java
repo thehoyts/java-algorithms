@@ -11,7 +11,7 @@ public class AlgorithmsTestDriver {
 		int [] a = new int[10];
 		
 		try {
-			ArrayAlgorithms.fill(1, 1, a);
+			ArrayAlgorithms.fill(a, 1, 1);
 			ArrayAlgorithms.reverse(a);
 			while(DisplayTool.instance().isShowing()) {}
 			
